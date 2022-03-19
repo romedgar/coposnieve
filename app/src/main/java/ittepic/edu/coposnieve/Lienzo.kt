@@ -11,7 +11,7 @@ import kotlin.random.Random
 
 class Lienzo(este:MainActivity) : View(este){
     val este = este
-   val copos = Array<Copo>(70,{ Copo(this) })
+   val copos = Array<Copo>(200,{ Copo(this) })
 
     val corrutina = GlobalScope.launch {
         while (true){
@@ -70,6 +70,16 @@ class Lienzo(este:MainActivity) : View(este){
         c.drawOval(800f,1450f,1200f,1650f,p)
         c.drawOval(800f,1300f,1200f,1500f,p)
         c.drawOval(800f,1150f,1200f,1350f,p)
+
+        //Nieve
+        p.color = Color.WHITE
+        c.drawRect(600f,1220f,670f,1230f,p)
+        c.drawRect(600f,1200f,650f,1210f,p)
+        c.drawRect(600f,1180f,630f,1190f,p)
+        c.drawOval(1020f,1150f,1200f,1350f,p)
+        c.drawOval(1020f,1450f,1200f,1650f,p)
+        c.drawOval(1020f,1300f,1200f,1500f,p)
+
 
 
 
